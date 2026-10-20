@@ -12,13 +12,13 @@ export function Post({ profile }: { profile: QualityProfile }) {
   return (
     <EffectComposer multisampling={0} enableNormalPass={false}>
       <Bloom
-        intensity={profile.tier === 'high' ? 0.42 : 0.3}
-        luminanceThreshold={0.72}
+        intensity={profile.tier === 'high' ? 0.32 : 0.24}
+        luminanceThreshold={0.82}
         luminanceSmoothing={0.24}
         mipmapBlur
         radius={0.72}
       />
-      <Vignette offset={0.26} darkness={0.62} eskil={false} blendFunction={BlendFunction.NORMAL} />
+      <Vignette offset={0.3} darkness={0.68} eskil={false} blendFunction={BlendFunction.NORMAL} />
       <Noise premultiply blendFunction={BlendFunction.OVERLAY} opacity={0.024} />
     </EffectComposer>
   );

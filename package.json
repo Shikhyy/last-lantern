@@ -21,9 +21,11 @@
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.1.1",
     "@fontsource/public-sans": "^5.1.1",
+    "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.0.4",
     "@react-three/fiber": "^9.1.0",
     "@react-three/postprocessing": "^3.0.4",
+    "gsap": "^3.15.0",
     "postprocessing": "^6.36.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -3,6 +3,7 @@ import { useEffect, useMemo } from 'react';
 import { CircleGeometry, PlaneGeometry } from 'three';
 import { usePalaceMaterials } from '../materials';
 import { makeWaterNormalTexture } from './textures';
+import { motionReduced } from '@/state/settingsStore';
 
 export interface RippleSurfaceProps {
   size?: [number, number];
@@ -57,7 +58,7 @@ export function RippleSurface({
 
   useFrame((_, delta) => {
     const normal = material.normalMap;
-    if (!normal) return;
+    if (!normal || motionReduced()) return;
     const step = Math.min(delta, 0.05) * speed;
     normal.offset.x += step;
     normal.offset.y += step * 0.63;

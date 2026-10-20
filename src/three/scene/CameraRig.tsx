@@ -5,13 +5,15 @@ import { Vector3 } from 'three';
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import { ROOM_LABELS } from '../architecture/layout';
 import { useSceneStore } from '@/state/sceneStore';
+import { useCinematicStore } from '@/state/cinematicStore';
+import { motionReduced } from '@/state/settingsStore';
 
-const reducedMotion = () =>
-  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reducedMotion = () => motionReduced();
 
 export function CameraRig() {
   const room = useSceneStore((state) => state.room);
   const cameraOverride = useSceneStore((state) => state.cameraOverride);
+  const cinematic = useCinematicStore((state) => state.active);
   const camera = useThree((state) => state.camera);
   const controls = useRef<OrbitControlsImpl>(null);
   const desiredPosition = useRef(new Vector3());
@@ -32,6 +34,7 @@ export function CameraRig() {
   }, [camera]);
 
   useEffect(() => {
+    if (cinematic) return;
     desiredPosition.current.set(preset.position[0], preset.position[1], preset.position[2]);
     desiredTarget.current.set(preset.target[0], preset.target[1], preset.target[2]);
     if ('fov' in camera && typeof preset.fov === 'number') {
@@ -39,9 +42,10 @@ export function CameraRig() {
       camera.updateProjectionMatrix();
     }
     transition.current = 0;
-  }, [room, camera, preset]);
+  }, [room, camera, preset, cinematic]);
 
   useFrame(({ clock, pointer }, delta) => {
+    if (cinematic) return;
     const dt = Math.min(delta, 0.05);
     const motion = reducedMotion() ? 0 : 1;
 
@@ -84,6 +88,8 @@ export function CameraRig() {
       instance.removeEventListener('end', onEnd);
     };
   }, []);
+
+  if (cinematic) return null;
 
   return (
     <OrbitControls

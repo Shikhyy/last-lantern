@@ -22,10 +22,10 @@ export function Lighting() {
   useFrame((_, delta) => {
     const k = 1 - Math.exp(-delta * 2.6);
     const day = timeOfDay === 'day';
-    if (sun.current) sun.current.intensity = MathUtils.lerp(sun.current.intensity, day ? 2.5 : 0, k);
-    if (fill.current) fill.current.intensity = MathUtils.lerp(fill.current.intensity, day ? 0.38 : 0.1, k);
-    if (moon.current) moon.current.intensity = MathUtils.lerp(moon.current.intensity, day ? 0 : 0.5, k);
-    if (hemi.current) hemi.current.intensity = MathUtils.lerp(hemi.current.intensity, day ? 0.3 : 0.12, k);
+    if (sun.current) sun.current.intensity = MathUtils.lerp(sun.current.intensity, day ? 1.75 : 0, k);
+    if (fill.current) fill.current.intensity = MathUtils.lerp(fill.current.intensity, day ? 0.3 : 0.14, k);
+    if (moon.current) moon.current.intensity = MathUtils.lerp(moon.current.intensity, day ? 0 : 0.72, k);
+    if (hemi.current) hemi.current.intensity = MathUtils.lerp(hemi.current.intensity, day ? 0.42 : 0.2, k);
   });
 
   return (
@@ -34,7 +34,7 @@ export function Lighting() {
       <directionalLight
         ref={sun}
         color={SCENE_COLORS.sun}
-        intensity={2.5}
+        intensity={1.75}
         position={[-24, 44, 17]}
         castShadow={profile.shadows}
         shadow-mapSize-width={profile.shadowMapSize}
@@ -48,7 +48,7 @@ export function Lighting() {
         shadow-bias={-0.0007}
         shadow-normalBias={0.04}
       />
-      <directionalLight ref={fill} color={0xbfd0e0} intensity={0.38} position={[30, 18, -24]} />
+      <directionalLight ref={fill} color={0xbfd0e0} intensity={0.3} position={[30, 18, -24]} />
       <directionalLight
         ref={moon}
         color={SCENE_COLORS.moon}

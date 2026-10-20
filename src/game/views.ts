@@ -82,9 +82,21 @@ export interface CouncilView {
   resultText: string;
 }
 
+export interface EventView {
+  id: string;
+  round: number;
+  phase: Phase;
+  kind: string;
+  actorId: string | null;
+  subjectId: string | null;
+  text: string;
+  clueId: string | null;
+}
+
 export interface PublicMatchView {
   phase: Phase;
   round: number;
+  finalRound: number;
   lantern: number;
   lastMessage: string;
   outcome: Faction | null;
@@ -98,6 +110,8 @@ export interface PublicMatchView {
   isFinale: boolean;
   finale: FinaleView | null;
   phaseHint: string;
+  recentEvents: EventView[];
+  boardLinks: { id: string; from: string; to: string; kind: string; round: number }[];
 }
 
 export interface PlayerView extends PublicMatchView {
@@ -196,6 +210,7 @@ export function publicView(state: MatchState): PublicMatchView {
   return {
     phase: state.phase,
     round: state.round,
+    finalRound: 5,
     lantern: state.lantern,
     lastMessage: state.lastMessage,
     outcome: state.outcome,
@@ -219,6 +234,25 @@ export function publicView(state: MatchState): PublicMatchView {
     isFinale: state.phase === 'finale',
     finale: finaleView(state),
     phaseHint: phaseHint(state),
+    recentEvents: state.events
+      .filter(
+        (event) =>
+          event.privateTo === null ||
+          event.privateTo === state.playerId ||
+          event.witnessedBy.includes(state.playerId),
+      )
+      .slice(-60)
+      .map((event) => ({
+        id: event.id,
+        round: event.round,
+        phase: event.phase,
+        kind: event.kind,
+        actorId: event.actorId,
+        subjectId: event.subjectId,
+        text: event.text,
+        clueId: event.clueId,
+      })),
+    boardLinks: (state.boardLinks ?? []).map((link) => ({ ...link })),
   };
 }
 

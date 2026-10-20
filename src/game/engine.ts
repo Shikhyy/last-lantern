@@ -39,6 +39,46 @@ export function applyAction(previous: MatchState, action: GameAction): ActionRes
       outcome = result(state);
       break;
 
+    case 'BOARD_LINK': {
+      if (!state.boardLinks) state.boardLinks = [];
+      if (!action.from || !action.to || action.from === action.to) {
+        return { state: previous, events: [], error: 'A thread needs two different pins.' };
+      }
+      if (state.boardLinks.length >= 40) {
+        return { state: previous, events: [], error: 'The board will hold no more threads.' };
+      }
+      if (
+        state.boardLinks.some(
+          (link) => link.from === action.from && link.to === action.to && link.kind === action.kind,
+        )
+      ) {
+        return { state: previous, events: [], error: 'That thread is already pinned.' };
+      }
+      state.boardLinks.push({
+        id: `b${state.nextId}`,
+        from: action.from,
+        to: action.to,
+        kind: action.kind,
+        round: state.round,
+      });
+      state.nextId += 1;
+      state.lastMessage = 'You pin a thread to the evidence board.';
+      outcome = result(state);
+      break;
+    }
+
+    case 'BOARD_UNLINK':
+      state.boardLinks = (state.boardLinks ?? []).filter((link) => link.id !== action.id);
+      state.lastMessage = 'The thread comes away cleanly.';
+      outcome = result(state);
+      break;
+
+    case 'BOARD_CLEAR':
+      state.boardLinks = [];
+      state.lastMessage = 'The board is bare again.';
+      outcome = result(state);
+      break;
+
     case 'EXAMINE':
       if (state.phase !== 'day' && state.phase !== 'dusk') {
         return { state: previous, events: [], error: 'There is no light to read by now.' };

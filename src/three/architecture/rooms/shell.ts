@@ -33,16 +33,6 @@ export function buildShell(detail: Detail): MergedBucket[] {
       kit.cylinder('sandstonePale', [3.0, 3.0, 0.5, 12], [x, 16.75, z], undefined, false, [3, 1]);
       kit.cylinder('sandstonePale', [2.75, 3.0, 0.42, 12], [x, 17.25, z], undefined, false, [3, 1]);
       kit.chhatri({ radius: 2.15, height: 3.0, position: [x, 17.45, z], material: 'sandstonePale' });
-      // Arrow-slit windows on the outward faces.
-      for (let i = 0; i < 5; i += 1) {
-        const angle = (i / 5) * Math.PI * 2 + (sx + sz) * 0.4;
-        kit.box(
-          'soot',
-          [0.26, 1.5, 0.4],
-          [x + Math.cos(angle) * 2.6, 7.4 + (i % 2) * 2.9, z + Math.sin(angle) * 2.6],
-          [0, -angle, 0],
-        );
-      }
     }
   }
 
@@ -129,17 +119,38 @@ export function buildShell(detail: Detail): MergedBucket[] {
     kit.sphere('desert', [dune.radius, 28, 10, 0, Math.PI * 2, 0, Math.PI / 2], [dune.x, -sink, dune.z]);
   }
 
-  // The fort town on the horizon: a defensive line of walls and towers.
+  // The fort town on the horizon: a broken defensive line of bastions, walls
+  // and domes, varied so it reads as a settlement rather than a repeated stamp.
   const horizonZ = -200;
-  kit.box('desert', [420, 15, 6], [0, 5, horizonZ], undefined, [40, 2]);
-  for (let i = -9; i <= 9; i += 1) {
-    const x = i * 22;
-    kit.cylinder('desert', [4.4, 5.2, 20, 12], [x, 8, horizonZ - 1], undefined, false, [3, 4]);
-    kit.sphere('desert', [5.0, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2], [x, 17.6, horizonZ - 1]);
+  kit.box('desert', [520, 13, 7], [0, 4.5, horizonZ], undefined, [48, 2]);
+  const bastions: Array<{ x: number; height: number; radius: number; dome: boolean }> = [
+    { x: -180, height: 16, radius: 4.8, dome: true },
+    { x: -138, height: 22, radius: 6.2, dome: true },
+    { x: -92, height: 14, radius: 4.0, dome: false },
+    { x: -48, height: 26, radius: 7.0, dome: true },
+    { x: 0, height: 30, radius: 8.4, dome: true },
+    { x: 48, height: 24, radius: 6.6, dome: true },
+    { x: 92, height: 17, radius: 4.4, dome: false },
+    { x: 138, height: 21, radius: 5.8, dome: true },
+    { x: 180, height: 15, radius: 4.6, dome: true },
+  ];
+  for (const bastion of bastions) {
+    kit.cylinder('desert', [bastion.radius * 0.82, bastion.radius, bastion.height, 12], [bastion.x, bastion.height / 2, horizonZ - 1], undefined, false, [3, 4]);
+    if (bastion.dome) {
+      kit.sphere('desert', [bastion.radius * 1.05, 16, 8, 0, Math.PI * 2, 0, Math.PI / 2], [bastion.x, bastion.height, horizonZ - 1]);
+    } else {
+      kit.box('desert', [bastion.radius * 1.9, 2.2, bastion.radius * 1.9], [bastion.x, bastion.height + 1.1, horizonZ - 1], undefined, [2, 2]);
+    }
   }
-  for (let i = 0; i < 20; i += 1) {
-    const x = -200 + i * 21;
-    kit.box('desert', [1.6, 1.8, 1.6], [x, 11.6, horizonZ - 2.4]);
+  for (let i = 0; i < 26; i += 1) {
+    const x = -210 + i * 16.5 + (i % 3) * 4;
+    const height = 1.4 + (i % 4) * 0.5;
+    kit.box('desert', [1.4, height, 1.4], [x, height / 2 + 0.2, horizonZ - 3.2]);
+  }
+  // A few larger pavilions set back from the wall.
+  for (const x of [-110, -20, 70, 150]) {
+    kit.box('desert', [12, 8, 8], [x, 4, horizonZ - 18], undefined, [3, 2]);
+    kit.chhatri({ radius: 4.2, height: 3.2, position: [x, 8, horizonZ - 18], material: 'desert' });
   }
 
   return kit.merge();

@@ -5,8 +5,11 @@ import { profileFor } from '../quality';
 import { useSceneStore } from '@/state/sceneStore';
 import { Atmosphere } from './Atmosphere';
 import { CameraRig } from './CameraRig';
+import { CinematicCamera } from './CinematicCamera';
+import { Birds } from './Birds';
 import { HeroLantern } from './HeroLantern';
 import { Lighting } from './Lighting';
+import { Trees } from './Trees';
 import { Post } from './Post';
 
 const ShellRoom = lazy(() => import('./rooms/ShellRoom'));
@@ -53,9 +56,12 @@ export function PalaceScene() {
       <Atmosphere />
       <Lighting />
       <CameraRig />
+      <CinematicCamera />
       <HeroLantern position={[0, 1.63, 0]} />
       <Suspense fallback={null}>
         <ShellRoom />
+        <Trees />
+        <Birds />
         {enabledRooms.includes('aangan') ? <AanganRoom /> : null}
         {enabledRooms.includes('gallery') ? <GalleryRoom /> : null}
         {enabledRooms.includes('archive') ? <ArchiveRoom /> : null}

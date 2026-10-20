@@ -175,6 +175,7 @@ export function createMatch(options: MatchOptions): MatchState {
     claims: [],
     missions: [],
     pacts: [],
+    boardLinks: [],
     council: null,
     nightState: null,
     finaleState: null,

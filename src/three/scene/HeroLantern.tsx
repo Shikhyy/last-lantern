@@ -5,10 +5,10 @@ import { DETAIL, Kit } from '../architecture/kit';
 import { MergedArchitecture } from '../architecture/MergedArchitecture';
 import { SCENE_COLORS, usePalaceMaterials } from '../materials';
 import { useSceneStore } from '@/state/sceneStore';
+import { motionReduced } from '@/state/settingsStore';
 import { makeGlowTexture } from './textures';
 
-const prefersReducedMotion = () =>
-  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prefersReducedMotion = () => motionReduced();
 
 export function HeroLantern({ position }: { position: [number, number, number] }) {
   const quality = useSceneStore((state) => state.quality);

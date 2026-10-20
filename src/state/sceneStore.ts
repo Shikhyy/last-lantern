@@ -23,6 +23,7 @@ interface SceneState {
   setQuality: (quality: QualityTier) => void;
   setTimeOfDay: (time: TimeOfDay) => void;
   setRoom: (room: RoomId) => void;
+  setCameraOverride: (camera: SceneState['cameraOverride']) => void;
   toggleDebug: () => void;
   setStats: (stats: SceneStats) => void;
   enableRoom: (room: RoomId) => void;
@@ -82,7 +83,7 @@ function readDeepLink(): DeepLink {
 const deepLink = readDeepLink();
 
 export const useSceneStore = create<SceneState>((set) => ({
-  mode: deepLink.mode ?? 'explore',
+  mode: deepLink.mode ?? 'game',
   quality: deepLink.quality ?? detectDefaultQuality(),
   timeOfDay: deepLink.timeOfDay ?? 'day',
   room: deepLink.room ?? 'aangan',
@@ -94,6 +95,7 @@ export const useSceneStore = create<SceneState>((set) => ({
   setQuality: (quality) => set({ quality }),
   setTimeOfDay: (timeOfDay) => set({ timeOfDay }),
   setRoom: (room) => set({ room }),
+  setCameraOverride: (cameraOverride) => set({ cameraOverride }),
   toggleDebug: () => set((state) => ({ debug: !state.debug })),
   setStats: (stats) => set({ stats }),
   enableRoom: (room) =>

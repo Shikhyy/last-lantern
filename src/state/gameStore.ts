@@ -2,10 +2,10 @@ import { create } from 'zustand';
 import { applyAction } from '@/game/engine';
 import { createMatch } from '@/game/match';
 import { loadMatch, saveMatch, serializeSave } from '@/game/save';
-import type { GameAction, MatchOptions, MatchState, RoomId } from '@/game/types';
+import type { GameAction, GameEvent, MatchOptions, MatchState, RoomId } from '@/game/types';
 import { useSceneStore } from './sceneStore';
 
-const SAVE_KEY = 'tll.match.v1';
+export const SAVE_KEY = 'tll.match.v1';
 
 export type SaveStatus = 'none' | 'ok' | 'corrupt';
 
@@ -18,6 +18,12 @@ interface GameState {
   saveReason: string | null;
   hasSave: boolean;
   lastOptions: MatchOptions | null;
+  /** True while the arrival, cast and private-oath sequence is playing. */
+  intro: boolean;
+  /** Increments for every accepted match action so the UI can cue a scene once. */
+  actionSeq: number;
+  phaseBefore: string | null;
+  lastEvents: GameEvent[];
   start: (options: MatchOptions) => void;
   resume: () => void;
   act: (action: GameAction) => boolean;
@@ -25,6 +31,8 @@ interface GameState {
   abandon: () => void;
   dismiss: () => void;
   goToRoom: (room: RoomId) => void;
+  finishIntro: () => void;
+  refreshSave: () => void;
 }
 
 function readSave(): { status: SaveStatus; reason: string | null; state: MatchState | null } {
@@ -67,6 +75,10 @@ export const useGameStore = create<GameState>((set, get) => ({
   saveReason: initial.reason,
   hasSave: initial.status === 'ok',
   lastOptions: null,
+  intro: false,
+  actionSeq: 0,
+  phaseBefore: null,
+  lastEvents: [],
 
   start: (options) => {
     const match = createMatch(options);
@@ -80,6 +92,10 @@ export const useGameStore = create<GameState>((set, get) => ({
       saveReason: null,
       hasSave: true,
       lastOptions: { ...options },
+      intro: true,
+      actionSeq: 0,
+      phaseBefore: null,
+      lastEvents: [],
     });
     syncScene(match);
   },
@@ -104,6 +120,10 @@ export const useGameStore = create<GameState>((set, get) => ({
       saveReason: null,
       hasSave: true,
       lastOptions: optionsOf(loaded.state),
+      intro: false,
+      actionSeq: 0,
+      phaseBefore: null,
+      lastEvents: [],
     });
     syncScene(loaded.state);
   },
@@ -131,6 +151,9 @@ export const useGameStore = create<GameState>((set, get) => ({
       saveStatus: 'ok',
       hasSave: true,
       lastOptions: get().lastOptions ?? optionsOf(result.state),
+      actionSeq: get().actionSeq + 1,
+      phaseBefore: current.phase,
+      lastEvents: result.events.filter((event) => isVisibleToPlayer(result.state, event)),
     });
     syncScene(result.state);
     return true;
@@ -155,6 +178,10 @@ export const useGameStore = create<GameState>((set, get) => ({
       saveReason: null,
       hasSave: true,
       lastOptions: { ...options, seed },
+      intro: true,
+      actionSeq: 0,
+      phaseBefore: null,
+      lastEvents: [],
     });
     syncScene(match);
   },
@@ -170,9 +197,42 @@ export const useGameStore = create<GameState>((set, get) => ({
       saveReason: null,
       hasSave: false,
       lastOptions: null,
+      intro: false,
+      actionSeq: 0,
+      phaseBefore: null,
+      lastEvents: [],
     });
     useSceneStore.getState().setTimeOfDay('day');
     useSceneStore.getState().setRoom('aangan');
+  },
+
+  refreshSave: () => {
+    const loaded = readSave();
+    set({
+      saveStatus: loaded.status,
+      saveReason: loaded.reason,
+      hasSave: loaded.status === 'ok',
+    });
+  },
+
+  finishIntro: () => {
+    const current = get().match;
+    set({ intro: false });
+    if (!current || current.phase !== 'dawn') return;
+    const result = applyAction(current, { type: 'ADVANCE' });
+    if (result.error) {
+      set({ error: result.error });
+      return;
+    }
+    persist(result.state);
+    set({
+      match: result.state,
+      notice: result.state.lastMessage,
+      actionSeq: get().actionSeq + 1,
+      phaseBefore: current.phase,
+      lastEvents: result.events.filter((event) => isVisibleToPlayer(result.state, event)),
+    });
+    syncScene(result.state);
   },
 
   dismiss: () => set({ error: null }),
@@ -188,6 +248,10 @@ export const useGameStore = create<GameState>((set, get) => ({
     useSceneStore.getState().setRoom(room);
   },
 }));
+
+function isVisibleToPlayer(state: MatchState, event: GameEvent): boolean {
+  return event.privateTo === null || event.privateTo === state.playerId || event.witnessedBy.includes(state.playerId);
+}
 
 function persist(state: MatchState): void {
   if (typeof window === 'undefined') return;

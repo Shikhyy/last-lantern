@@ -1,11 +1,19 @@
-import { useEffect, useMemo, useState } from 'react';
-import { OATHS } from '@/game/cast';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { audio } from '@/audio/audio';
 import { playerView, type PlayerView } from '@/game/views';
-import type { Difficulty, PlayerOath, Role } from '@/game/types';
+import type { Role } from '@/game/types';
 import { useGameStore } from '@/state/gameStore';
 import { useSceneStore } from '@/state/sceneStore';
+import { useSettingsStore } from '@/state/settingsStore';
 import { Casebook } from './Casebook';
+import { EndingScreen } from './EndingScreen';
+import { MatchOverlays, type OverlayId } from './MatchOverlays';
 import { PhasePanel } from './PhasePanels';
+import { TitleFlow } from './TitleFlow';
+import { Icon } from './Icon';
+import { OpeningSequence } from './OpeningSequence';
+import { SceneCue } from './SceneCue';
+import { cueForAction, type CinematicCue } from './cinematics';
 
 const PHASE_LABEL: Record<string, string> = {
   dawn: 'Dawn',
@@ -25,169 +33,23 @@ const ROLE_LABEL: Record<Role, string> = {
   oathkeeper: 'Oathkeeper',
 };
 
-const PRONOUNS = ['they/them', 'she/her', 'he/him'];
-
 export function GameShell() {
   const status = useGameStore((state) => state.status);
+  const intro = useGameStore((state) => state.intro);
+  const match = useGameStore((state) => state.match);
+  const view = useMemo(() => (match ? playerView(match) : null), [match]);
   return (
     <div className="game">
-      {status === 'title' ? <TitleScreen /> : <MatchScreen />}
+      {status === 'title' || !view ? (
+        <TitleFlow />
+      ) : intro ? (
+        <OpeningSequence view={view} />
+      ) : view.phase === 'ending' ? (
+        <EndingScreen view={view} />
+      ) : (
+        <MatchScreen />
+      )}
       <Toast />
-    </div>
-  );
-}
-
-function TitleScreen() {
-  const start = useGameStore((state) => state.start);
-  const resume = useGameStore((state) => state.resume);
-  const hasSave = useGameStore((state) => state.hasSave);
-  const saveStatus = useGameStore((state) => state.saveStatus);
-  const saveReason = useGameStore((state) => state.saveReason);
-  const [name, setName] = useState('The Stranger');
-  const [pronouns, setPronouns] = useState(PRONOUNS[0]);
-  const [oath, setOath] = useState<PlayerOath>('keep_promise');
-  const [difficulty, setDifficulty] = useState<Difficulty>('normal');
-  const [seed, setSeed] = useState(() => randomSeed().toString());
-
-  const chosenOath = OATHS.find((entry) => entry.id === oath) ?? OATHS[0];
-
-  return (
-    <div className="title-screen">
-      <div className="title-screen__inner">
-        <header className="title-screen__head">
-          <p className="eyebrow">Nimbagarh · a palace at the edge of the Aravalli</p>
-          <h1>The Last Lantern</h1>
-          <p className="title-screen__lede">
-            Twelve are sealed inside. Three are Shadowed. The flame is the only clock, and every night it burns
-            lower. Keep your oath, read the room, and name what you find before the dark does.
-          </p>
-        </header>
-
-        <div className="title-screen__grid">
-          <section className="title-screen__premise">
-            <h2>How the night is kept</h2>
-            <ol>
-              <li>
-                <b>By day</b> search the Aangan, the Long Gallery, the Archive and the Council Chamber. Evidence is
-                physical and specific, never a label.
-              </li>
-              <li>
-                <b>By dusk</b> make one last promise. At the council, take the floor, then lock a private vote. Votes
-                are counted together; a tie opens the Lantern’s Riddle.
-              </li>
-              <li>
-                <b>By night</b> the Keeper Reads, the Warden wards, the Shadowed draw the Veil. At dawn the dead are
-                named and their roles are read.
-              </li>
-              <li>
-                <b>At four</b> the finale begins: a reckoning, one question, one name. The last unmasking shows every
-                role and every broken pact.
-              </li>
-            </ol>
-            <p className="title-screen__note">
-              A complete match runs five days and nights. No account, no network, no model — every line is authored and
-              every decision is local.
-            </p>
-          </section>
-
-          <section className="title-screen__form" aria-label="Begin a match">
-            <h2>Take a seat</h2>
-            <label className="field">
-              <span>Name at the table</span>
-              <input value={name} maxLength={28} onChange={(event) => setName(event.target.value)} />
-            </label>
-            <label className="field">
-              <span>Pronouns</span>
-              <select value={pronouns} onChange={(event) => setPronouns(event.target.value)}>
-                {PRONOUNS.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label className="field">
-              <span>Your oath</span>
-              <select value={oath} onChange={(event) => setOath(event.target.value as PlayerOath)}>
-                {OATHS.map((option) => (
-                  <option key={option.id} value={option.id}>
-                    {option.title}
-                  </option>
-                ))}
-              </select>
-              <small>{chosenOath.description}</small>
-            </label>
-
-            <fieldset className="field field--choice">
-              <legend>Table difficulty</legend>
-              <div className="segmented segmented--wide">
-                {(['easy', 'normal', 'hard'] as Difficulty[]).map((tier) => (
-                  <button
-                    key={tier}
-                    type="button"
-                    className={difficulty === tier ? 'segmented__item is-active' : 'segmented__item'}
-                    aria-pressed={difficulty === tier}
-                    onClick={() => setDifficulty(tier)}
-                  >
-                    {tier === 'easy' ? 'Forgiving' : tier === 'normal' ? 'Balanced' : 'Exacting'}
-                  </button>
-                ))}
-              </div>
-            </fieldset>
-
-            <details className="seed-field">
-              <summary>Seed</summary>
-              <label className="field">
-                <span>Reproducible draw</span>
-                <input
-                  value={seed}
-                  inputMode="numeric"
-                  onChange={(event) => setSeed(event.target.value.replace(/[^0-9]/g, '').slice(0, 10))}
-                />
-              </label>
-            </details>
-
-            <div className="title-screen__actions">
-              <button
-                type="button"
-                className="button button--primary"
-                onClick={() =>
-                  start({
-                    seed: Number(seed) || randomSeed(),
-                    playerName: name.trim() || 'The Stranger',
-                    pronouns,
-                    oath,
-                    difficulty,
-                  })
-                }
-              >
-                Enter Nimbagarh
-              </button>
-              {hasSave ? (
-                <button type="button" className="button" onClick={resume}>
-                  Continue the night
-                </button>
-              ) : null}
-            </div>
-            {saveStatus === 'corrupt' ? (
-              <p className="title-screen__damage">
-                A saved session could not be restored: {saveReason ?? 'the file is damaged'}. It has been left where it
-                is; beginning a new match will replace it.
-              </p>
-            ) : null}
-          </section>
-        </div>
-
-        <footer className="title-screen__foot">
-          <p>
-            12 contestants · 3 Shadowed · 1 Keeper · 1 Warden · 7 Oathkeepers · six authored endings
-          </p>
-          <p className="title-screen__limitation">
-            Fictional palace. Materials are CC0; photographic references are study only. This is an interpretation of
-            Rajasthani palace architecture, not a survey of Suryagarh.
-          </p>
-        </footer>
-      </div>
     </div>
   );
 }
@@ -198,17 +60,58 @@ function MatchScreen() {
   const act = useGameStore((state) => state.act);
   const goToRoom = useGameStore((state) => state.goToRoom);
   const restart = useGameStore((state) => state.restart);
+  const actionSeq = useGameStore((state) => state.actionSeq);
+  const phaseBefore = useGameStore((state) => state.phaseBefore);
+  const lastEvents = useGameStore((state) => state.lastEvents);
   const [confirmRestart, setConfirmRestart] = useState(false);
+  const [cue, setCue] = useState<CinematicCue | null>(null);
+  const [overlay, setOverlay] = useState<OverlayId | null>(null);
+  const shownSeq = useRef(0);
+  const muted = useSettingsStore((state) => state.settings.muted);
+  const setSettings = useSettingsStore((state) => state.set);
 
   const view = useMemo(() => (match ? playerView(match) : null), [match]);
+
+  useEffect(() => {
+    const start = () => {
+      audio.start();
+      audio.setNight(['dusk', 'council', 'night'].includes(view?.phase ?? ''));
+    };
+    window.addEventListener('pointerdown', start, { once: true });
+    window.addEventListener('keydown', start, { once: true });
+    return () => {
+      window.removeEventListener('pointerdown', start);
+      window.removeEventListener('keydown', start);
+    };
+  }, [view?.phase]);
+
+  useEffect(() => {
+    audio.setNight(['dusk', 'council', 'night'].includes(view?.phase ?? ''));
+  }, [view?.phase]);
+
+  useEffect(() => {
+    if (!view || actionSeq === shownSeq.current || cue) return;
+    shownSeq.current = actionSeq;
+    if (actionSeq <= 0) return;
+    const next = cueForAction(view, phaseBefore, lastEvents);
+    if (next) setCue(next);
+  }, [actionSeq, cue, lastEvents, phaseBefore, view]);
+
   if (!view || !match) return null;
 
   const setMode = useSceneStore.getState();
   const room = match.currentRoom;
 
+  const restoreTime = ['dawn', 'day', 'judgment', 'ending'].includes(view.phase) ? 'day' : 'night';
+
+  const toggleMute = () => {
+    audio.start();
+    setSettings({ muted: !muted });
+  };
+
   return (
-    <div className="match">
-      <header className="match__bar">
+    <div className={cue ? 'match is-cueing' : 'match'}>
+      <header className="match__bar" aria-hidden={cue ? true : undefined}>
         <div className="match__brand">
           <span className="match__title">The Last Lantern</span>
           <span className="match__place">Nimbagarh</span>
@@ -220,6 +123,36 @@ function MatchScreen() {
         </div>
 
         <LanternMeter value={view.lantern} />
+
+        <div className="match__tools" aria-label="Match tools">
+          <button type="button" className="icon-button" onClick={() => setOverlay('dossier')} aria-label="Open dossiers" title="Dossiers">
+            <Icon name="users" />
+          </button>
+          <button type="button" className="icon-button" onClick={() => setOverlay('casebook')} aria-label="Open casebook" title="Casebook">
+            <Icon name="book" />
+          </button>
+          <button type="button" className="icon-button" onClick={() => setOverlay('missions')} aria-label="Open the work of the day" title="Work of the day">
+            <Icon name="board" />
+          </button>
+          <button type="button" className="icon-button" onClick={() => setOverlay('transcript')} aria-label="Open the transcript" title="Transcript">
+            <Icon name="archive" />
+          </button>
+          <button type="button" className="icon-button" onClick={() => setOverlay('help')} aria-label="How to play" title="How to play">
+            <Icon name="mask" />
+          </button>
+          <button
+            type="button"
+            className="icon-button"
+            onClick={toggleMute}
+            aria-label={muted ? 'Turn sound on' : 'Mute ambience'}
+            title={muted ? 'Turn sound on' : 'Mute ambience'}
+          >
+            <Icon name={muted ? 'mute' : 'sound'} />
+          </button>
+          <button type="button" className="icon-button" onClick={() => setOverlay('settings')} aria-label="Settings" title="Settings">
+            <Icon name="gear" />
+          </button>
+        </div>
 
         <div className="match__controls">
           <button type="button" className="ghost-button" onClick={() => setMode.setMode('explore')}>
@@ -242,7 +175,7 @@ function MatchScreen() {
         </div>
       </header>
 
-      <main className="match__grid">
+      <main className="match__grid" aria-hidden={cue ? true : undefined}>
         <aside className="rail rail--left" aria-label="The table">
           <div className="rail__head">
             <h2>The table</h2>
@@ -301,12 +234,32 @@ function MatchScreen() {
         </aside>
       </main>
 
-      <footer className="match__foot">
+      <footer className="match__foot" aria-hidden={cue ? true : undefined}>
         <span className="match__message" aria-live="polite">
           {notice ?? view.lastMessage}
         </span>
         <span className="match__room">In the {roomLabel(room)}</span>
       </footer>
+      {cue ? (
+        <SceneCue
+          cue={cue}
+          restoreRoom={match.currentRoom}
+          restoreTime={restoreTime}
+          onDone={() => setCue(null)}
+        />
+      ) : null}
+      {overlay ? (
+        <MatchOverlays
+          overlay={overlay}
+          view={view}
+          onClose={() => setOverlay(null)}
+          onAction={act}
+          onRestart={() => {
+            setOverlay(null);
+            restart();
+          }}
+        />
+      ) : null}
     </div>
   );
 }
@@ -404,13 +357,4 @@ function roomLabel(room: string): string {
     default:
       return 'Aangan';
   }
-}
-
-function randomSeed(): number {
-  if (typeof crypto !== 'undefined' && 'getRandomValues' in crypto) {
-    const buffer = new Uint32Array(1);
-    crypto.getRandomValues(buffer);
-    return buffer[0] || 1;
-  }
-  return Math.floor(Date.now() % 2147483647) || 1;
 }

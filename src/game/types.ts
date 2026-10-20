@@ -270,6 +270,14 @@ export interface LedgerEntry {
   eventId: string;
 }
 
+export interface BoardLink {
+  id: string;
+  from: string;
+  to: string;
+  kind: 'supports' | 'contradicts' | 'places' | 'suspects';
+  round: number;
+}
+
 export interface JournalEntry {
   id: string;
   round: number;
@@ -415,6 +423,8 @@ export interface MatchState {
   claims: Claim[];
   missions: Mission[];
   pacts: Pact[];
+  /** Links the player has pinned on the evidence board. */
+  boardLinks: BoardLink[];
   council: CouncilState | null;
   nightState: NightState | null;
   finaleState: FinaleState | null;
@@ -472,6 +482,9 @@ export type GameAction =
   | { type: 'FINAL_TESTIMONY'; text: string }
   | { type: 'FINAL_ANSWER'; text: string }
   | { type: 'FINAL_VOTE'; targetId: string }
+  | { type: 'BOARD_LINK'; from: string; to: string; kind: BoardLink['kind'] }
+  | { type: 'BOARD_UNLINK'; id: string }
+  | { type: 'BOARD_CLEAR' }
   | { type: 'SET_ROOM'; room: RoomId };
 
 export interface SaveEnvelope {

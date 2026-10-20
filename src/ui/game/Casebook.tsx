@@ -3,10 +3,21 @@ import type { GameAction } from '@/game/types';
 import type { PlayerView } from '@/game/views';
 import { nameIn } from './GameShell';
 
-type Tab = 'evidence' | 'journal' | 'ledger' | 'notes';
+export type CasebookTab = 'evidence' | 'board' | 'journal' | 'ledger' | 'notes';
+type Tab = CasebookTab;
+
+type ThreadKind = 'supports' | 'contradicts' | 'places' | 'suspects';
+
+const THREADS: { id: ThreadKind; label: string }[] = [
+  { id: 'supports', label: 'Supports' },
+  { id: 'contradicts', label: 'Contradicts' },
+  { id: 'places', label: 'Places at' },
+  { id: 'suspects', label: 'Suspicion' },
+];
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'evidence', label: 'Evidence' },
+  { id: 'board', label: 'Board' },
   { id: 'journal', label: 'Journal' },
   { id: 'ledger', label: 'Ledger' },
   { id: 'notes', label: 'Intel' },
@@ -15,12 +26,54 @@ const TABS: { id: Tab; label: string }[] = [
 export function Casebook({
   view,
   onAction,
+  initialTab = 'evidence',
 }: {
   view: PlayerView;
   onAction: (action: GameAction) => boolean;
+  initialTab?: CasebookTab;
 }) {
-  const [tab, setTab] = useState<Tab>('evidence');
+  const [tab, setTab] = useState<Tab>(initialTab);
+  const [threadFrom, setThreadFrom] = useState('');
+  const [threadTo, setThreadTo] = useState('');
+  const [threadKind, setThreadKind] = useState<ThreadKind>('supports');
+  const [threadError, setThreadError] = useState<string | null>(null);
   const openClaims = view.claims.length;
+
+  const nodes = [
+    ...view.contestants.map((person) => ({ id: `person:${person.id}`, label: person.name, group: 'People' })),
+    ...view.clues.map((clue) => ({ id: `clue:${clue.id}`, label: clue.title, group: 'Evidence' })),
+    ...['aangan', 'gallery', 'archive', 'council'].map((room) => ({ id: `room:${room}`, label: roomName(room), group: 'Places' })),
+  ];
+
+  const nodeLabel = (id: string) => nodes.find((node) => node.id === id)?.label ?? id.replace(/^[a-z]+:/, '');
+
+  const linkThread = () => {
+    setThreadError(null);
+    if (!threadFrom || !threadTo || threadFrom === threadTo) {
+      setThreadError('Choose two different pins.');
+      return;
+    }
+    const accepted = onAction({ type: 'BOARD_LINK', from: threadFrom, to: threadTo, kind: threadKind });
+    if (!accepted) {
+      setThreadError('That thread could not be pinned.');
+      return;
+    }
+    setThreadFrom('');
+    setThreadTo('');
+  };
+
+  const pin = (nodeId: string) => {
+    setThreadError(null);
+    if (!threadFrom) {
+      setThreadFrom(nodeId);
+      return;
+    }
+    if (threadFrom === nodeId) {
+      setThreadFrom('');
+      return;
+    }
+    setThreadTo(nodeId);
+  };
 
   return (
     <div className="casebook">
@@ -95,6 +148,98 @@ export function Casebook({
                         <span className="claim__night">Night {claim.night}</span>
                       </li>
                     ))}
+                </ul>
+              )}
+            </div>
+          </>
+        ) : null}
+
+        {tab === 'board' ? (
+          <>
+            <p className="casebook__note">
+              The board is yours alone. Pin a person, a clue, or a room, then pin a second to draw a thread. Nothing
+              here changes what the court knows.
+            </p>
+            <div className="board-pins" role="group" aria-label="Evidence pins">
+              {['People', 'Evidence', 'Places'].map((group) => (
+                <div key={group} className="board-pins__group">
+                  <h4>{group}</h4>
+                  <div className="board-pins__grid">
+                    {nodes
+                      .filter((node) => node.group === group)
+                      .map((node) => (
+                        <button
+                          key={node.id}
+                          type="button"
+                          className={
+                            threadFrom === node.id
+                              ? 'board-pin is-from'
+                              : threadTo === node.id
+                                ? 'board-pin is-to'
+                                : 'board-pin'
+                          }
+                          aria-pressed={threadFrom === node.id || threadTo === node.id}
+                          onClick={() => pin(node.id)}
+                        >
+                          {node.label}
+                        </button>
+                      ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="board-thread-maker">
+              <div className="board-thread-maker__pair">
+                <span>{threadFrom ? nodeLabel(threadFrom) : 'First pin'}</span>
+                <b>{threadKind === 'contradicts' ? '≠' : threadKind === 'supports' ? '→' : threadKind === 'places' ? '@' : '?'}</b>
+                <span>{threadTo ? nodeLabel(threadTo) : 'Second pin'}</span>
+              </div>
+              <div className="segmented segmented--wide board-thread-maker__kinds">
+                {THREADS.map((thread) => (
+                  <button
+                    key={thread.id}
+                    type="button"
+                    className={threadKind === thread.id ? 'segmented__item is-active' : 'segmented__item'}
+                    aria-pressed={threadKind === thread.id}
+                    onClick={() => setThreadKind(thread.id)}
+                  >
+                    {thread.label}
+                  </button>
+                ))}
+              </div>
+              <button type="button" className="button button--primary" disabled={!threadFrom || !threadTo} onClick={linkThread}>
+                Pin the thread
+              </button>
+              <button type="button" className="text-button" onClick={() => { setThreadFrom(''); setThreadTo(''); setThreadError(null); }}>
+                Clear pins
+              </button>
+            </div>
+            {threadError ? <p className="form-error" role="alert">{threadError}</p> : null}
+            <div className="casebook__section">
+              <div className="board-thread-head">
+                <h3>Threads</h3>
+                {view.boardLinks.length > 0 ? (
+                  <button type="button" className="text-button text-button--danger" onClick={() => onAction({ type: 'BOARD_CLEAR' })}>
+                    Clear the board
+                  </button>
+                ) : null}
+              </div>
+              {view.boardLinks.length === 0 ? (
+                <p className="casebook__empty">No threads yet. Pin two things that do not sit easily together.</p>
+              ) : (
+                <ul className="board-threads">
+                  {[...view.boardLinks].reverse().map((link) => (
+                    <li key={link.id} className={`board-thread is-${link.kind}`}>
+                      <span className="board-thread__kind">{THREADS.find((thread) => thread.id === link.kind)?.label ?? link.kind}</span>
+                      <span className="board-thread__names">
+                        {nodeLabel(link.from)} <b>·</b> {nodeLabel(link.to)}
+                      </span>
+                      <span className="quiet">Night {link.round}</span>
+                      <button type="button" className="toast__close" aria-label="Remove thread" onClick={() => onAction({ type: 'BOARD_UNLINK', id: link.id })}>
+                        ×
+                      </button>
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>
@@ -210,4 +355,17 @@ export function Casebook({
       </div>
     </div>
   );
+}
+
+function roomName(room: string): string {
+  switch (room) {
+    case 'gallery':
+      return 'The Long Gallery';
+    case 'archive':
+      return 'The Archive';
+    case 'council':
+      return 'The Council Chamber';
+    default:
+      return 'The Aangan';
+  }
 }

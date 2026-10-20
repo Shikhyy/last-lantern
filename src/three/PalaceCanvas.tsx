@@ -50,7 +50,7 @@ export function PalaceCanvas({ onContextLost, onContextRestored }: PalaceCanvasP
       }}
       onCreated={({ gl }) => {
         gl.toneMapping = ACESFilmicToneMapping;
-        gl.toneMappingExposure = profile.tier === 'low' ? 1.0 : 0.9;
+        gl.toneMappingExposure = profile.tier === 'low' ? 0.9 : 0.78;
         gl.outputColorSpace = SRGBColorSpace;
       }}
     >

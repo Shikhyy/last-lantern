@@ -18,9 +18,9 @@ export function Atmosphere() {
     const map = hdri[timeOfDay];
     scene.environment = map;
     scene.background = map;
-    scene.environmentIntensity = timeOfDay === 'night' ? 0.3 : 1.05;
-    scene.backgroundIntensity = timeOfDay === 'night' ? 0.6 : 1;
-    scene.backgroundBlurriness = timeOfDay === 'night' ? 0.18 : 0.02;
+    scene.environmentIntensity = timeOfDay === 'night' ? 0.32 : 0.76;
+    scene.backgroundIntensity = timeOfDay === 'night' ? 0.64 : 0.9;
+    scene.backgroundBlurriness = timeOfDay === 'night' ? 0.22 : 0.1;
     scene.backgroundRotation.set(0, timeOfDay === 'night' ? 0.7 : 2.5, 0);
     scene.environmentRotation.set(0, timeOfDay === 'night' ? 0.7 : 2.5, 0);
     scene.fog = new FogExp2(timeOfDay === 'night' ? 0x0b1424 : 0xcaa277, timeOfDay === 'night' ? 0.0028 : 0.0017);

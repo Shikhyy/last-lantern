@@ -4,9 +4,9 @@ import { AdditiveBlending, PointLight } from 'three';
 import { cloneModel, usePalaceAssets } from '../assets/AssetProvider';
 import { SCENE_COLORS } from '../materials';
 import { makeGlowTexture } from './textures';
+import { motionReduced } from '@/state/settingsStore';
 
-const reduced = () =>
-  typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduced = () => motionReduced();
 
 export function DiyaLamp({
   position,

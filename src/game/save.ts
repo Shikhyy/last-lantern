@@ -70,6 +70,17 @@ export function recoverState(state: MatchState): MatchState {
     recovered.phase = 'judgment';
   }
   if (!Array.isArray(recovered.voteHistory)) recovered.voteHistory = [];
+  if (!Array.isArray(recovered.boardLinks)) recovered.boardLinks = [];
+  recovered.boardLinks = recovered.boardLinks
+    .filter(
+      (link) =>
+        link &&
+        typeof link.id === 'string' &&
+        typeof link.from === 'string' &&
+        typeof link.to === 'string' &&
+        ['supports', 'contradicts', 'places', 'suspects'].includes(link.kind),
+    )
+    .slice(0, 60);
   if (!recovered.playerIntel) {
     recovered.playerIntel = { reads: [], wards: [], channel: [], notes: [] };
   }
