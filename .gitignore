@@ -1,0 +1,13 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+refs
+test-results
+playwright-report
+blob-report
+coverage
+
+.asset-source
+.taste-skill
