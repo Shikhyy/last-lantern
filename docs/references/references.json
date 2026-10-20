@@ -1,0 +1,56 @@
+{
+  "courtyard_carved_sandstone.jpg": {
+    "title": "File:Carved sandstone courtyard interior, Jaisalmer.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Carved_sandstone_courtyard_interior,_Jaisalmer.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Reema_Jalihal\" title=\"User:Reema Jalihal\">Reema Jalihal</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Carved_sandstone_courtyard_interior%2C_Jaisalmer.jpg/1920px-Carved_sandstone_courtyard_interior%2C_Jaisalmer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "patwon_facade.jpg": {
+    "title": "File:Patwa Haveli, Jaisalmer - front facade.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Patwa_Haveli,_Jaisalmer_-_front_facade.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Meghashah21&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Meghashah21 (page does not exist)\">Meghashah21</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Patwa_Haveli%2C_Jaisalmer_-_front_facade.jpg/1920px-Patwa_Haveli%2C_Jaisalmer_-_front_facade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "patwon_windows.jpg": {
+    "title": "File:Patwa Haveli, Jaisalmer - intricate windows.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Patwa_Haveli,_Jaisalmer_-_intricate_windows.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:KaveeshIAm&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:KaveeshIAm (page does not exist)\">Kaveesh Pendalwar</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Patwa_Haveli%2C_Jaisalmer_-_intricate_windows.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+  },
+  "fort_haveli_art.jpg": {
+    "title": "File:Jaisalmer, India, Jaisalmer Fort, Haveli art.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Jaisalmer,_India,_Jaisalmer_Fort,_Haveli_art.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Argenberg\" title=\"User:Argenberg\">Vyacheslav Argenberg</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Haveli_art.jpg/1920px-Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Haveli_art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "jain_columns.jpg": {
+    "title": "File:Jaisalmer, India, Jaisalmer Fort, Jain Temple, Columns.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Jaisalmer,_India,_Jaisalmer_Fort,_Jain_Temple,_Columns.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Argenberg\" title=\"User:Argenberg\">Vyacheslav Argenberg</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Columns.jpg/1920px-Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Columns.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  },
+  "jain_carvings.jpg": {
+    "title": "File:Jaisalmer, India, Jaisalmer Fort, Jain Temple, Carvings 2.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Jaisalmer,_India,_Jaisalmer_Fort,_Jain_Temple,_Carvings_2.jpg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Argenberg\" title=\"User:Argenberg\">Vyacheslav Argenberg</a>",
+    "credit": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Carvings_2.jpg/1920px-Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Carvings_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+  }
+}

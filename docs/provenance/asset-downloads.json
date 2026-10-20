@@ -1,0 +1,1112 @@
+{
+  "generated": "2026-10-19T18:22:18.944Z",
+  "source": "Poly Haven and Wikimedia Commons",
+  "downloads": [
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_diff_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_wall_2k_diffuse.jpg",
+      "bytes": 2700600,
+      "md5": "6341783d2d5dad5eea7f70852f27e6ce",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_2k_diffuse.webp",
+      "bytes": 671572,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_512_diffuse.webp",
+      "bytes": 50476,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/large_sandstone_blocks/large_sandstone_blocks_diff_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_wall_1k_diffuse.jpg",
+      "bytes": 750937,
+      "md5": "fbc24ce12cb1dd05490749c7b951c4bc",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/large_sandstone_blocks/large_sandstone_blocks_diff_1k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_1k_diffuse.webp",
+      "bytes": 205302,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_wall_2k_normal.jpg",
+      "bytes": 2517711,
+      "md5": "99004e9ecbec1a38f9516bb14b3c1f53",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_2k_normal.webp",
+      "bytes": 723214,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_512_normal.webp",
+      "bytes": 50130,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/large_sandstone_blocks/large_sandstone_blocks_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_wall_1k_normal.jpg",
+      "bytes": 714290,
+      "md5": "59752e8ca6c832c87292825ce53e1ab7",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/large_sandstone_blocks/large_sandstone_blocks_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_1k_normal.webp",
+      "bytes": 209762,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_rough_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_wall_2k_rough.jpg",
+      "bytes": 2070646,
+      "md5": "474e491dfd5b77497216074f3f9012b3",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_2k_rough.webp",
+      "bytes": 521810,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/large_sandstone_blocks/large_sandstone_blocks_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_512_rough.webp",
+      "bytes": 37800,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/large_sandstone_blocks/large_sandstone_blocks_rough_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_wall_1k_rough.jpg",
+      "bytes": 574293,
+      "md5": "8e92bb0b028aaa04930beaaab6d3e60f",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/large_sandstone_blocks/large_sandstone_blocks_rough_1k.jpg",
+      "destination": "public/assets/textures/sandstone_wall_1k_rough.webp",
+      "bytes": 159458,
+      "derivedFrom": ".asset-source/textures/sandstone_wall_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_diff_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_red_2k_diffuse.jpg",
+      "bytes": 2605614,
+      "md5": "c539842e60660414213fa7299fbfaebd",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_red_2k_diffuse.webp",
+      "bytes": 506546,
+      "derivedFrom": ".asset-source/textures/sandstone_red_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_red_512_diffuse.webp",
+      "bytes": 31830,
+      "derivedFrom": ".asset-source/textures/sandstone_red_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_wall/red_sandstone_wall_diff_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_red_1k_diffuse.jpg",
+      "bytes": 656819,
+      "md5": "8639968c2ce8b0b2e54cc6ca0c19cd76",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_wall/red_sandstone_wall_diff_1k.jpg",
+      "destination": "public/assets/textures/sandstone_red_1k_diffuse.webp",
+      "bytes": 122378,
+      "derivedFrom": ".asset-source/textures/sandstone_red_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_red_2k_normal.jpg",
+      "bytes": 4031718,
+      "md5": "83c4b9159e1b0c59982bcdca1bc107d0",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_red_2k_normal.webp",
+      "bytes": 1644858,
+      "derivedFrom": ".asset-source/textures/sandstone_red_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_red_512_normal.webp",
+      "bytes": 97652,
+      "derivedFrom": ".asset-source/textures/sandstone_red_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_wall/red_sandstone_wall_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_red_1k_normal.jpg",
+      "bytes": 987917,
+      "md5": "0d2511d4d8ac1d48f417f7fc6345ffb6",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_wall/red_sandstone_wall_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/sandstone_red_1k_normal.webp",
+      "bytes": 372920,
+      "derivedFrom": ".asset-source/textures/sandstone_red_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_rough_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_red_2k_rough.jpg",
+      "bytes": 1576503,
+      "md5": "6bb10b65e8f7084917740332438f5894",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_red_2k_rough.webp",
+      "bytes": 224626,
+      "derivedFrom": ".asset-source/textures/sandstone_red_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_wall/red_sandstone_wall_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_red_512_rough.webp",
+      "bytes": 19548,
+      "derivedFrom": ".asset-source/textures/sandstone_red_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_wall/red_sandstone_wall_rough_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_red_1k_rough.jpg",
+      "bytes": 430875,
+      "md5": "790833c643017903ba371e9d758b0f0d",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_wall/red_sandstone_wall_rough_1k.jpg",
+      "destination": "public/assets/textures/sandstone_red_1k_rough.webp",
+      "bytes": 65248,
+      "derivedFrom": ".asset-source/textures/sandstone_red_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_diff_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_floor_2k_diffuse.jpg",
+      "bytes": 2722687,
+      "md5": "a1259b901bce5c5b428ca1fdbb5c8ac7",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_2k_diffuse.webp",
+      "bytes": 557852,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_512_diffuse.webp",
+      "bytes": 28032,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_pavement/red_sandstone_pavement_diff_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_floor_1k_diffuse.jpg",
+      "bytes": 662808,
+      "md5": "c2de38e10d06a4576b820af8a474d2b5",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_pavement/red_sandstone_pavement_diff_1k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_1k_diffuse.webp",
+      "bytes": 126554,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_floor_2k_normal.jpg",
+      "bytes": 3573918,
+      "md5": "331f734509e5354c74012364d1c19faa",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_2k_normal.webp",
+      "bytes": 1391430,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_512_normal.webp",
+      "bytes": 64320,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_pavement/red_sandstone_pavement_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_floor_1k_normal.jpg",
+      "bytes": 815891,
+      "md5": "0b961a8ed91b297db7dd75458b70b8d1",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_pavement/red_sandstone_pavement_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_1k_normal.webp",
+      "bytes": 288622,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_rough_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_floor_2k_rough.jpg",
+      "bytes": 2013023,
+      "md5": "fe131d7b65d3bd7a71e20efd162f73aa",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_2k_rough.webp",
+      "bytes": 406634,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_pavement/red_sandstone_pavement_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_512_rough.webp",
+      "bytes": 19690,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_pavement/red_sandstone_pavement_rough_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_floor_1k_rough.jpg",
+      "bytes": 486090,
+      "md5": "3010896be9f01f8939b8b1c46b4247d8",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_pavement/red_sandstone_pavement_rough_1k.jpg",
+      "destination": "public/assets/textures/sandstone_floor_1k_rough.webp",
+      "bytes": 87764,
+      "derivedFrom": ".asset-source/textures/sandstone_floor_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_diff_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_tile_2k_diffuse.jpg",
+      "bytes": 2358594,
+      "md5": "92e9e63da87edd24d16cb0edd651af12",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_2k_diffuse.webp",
+      "bytes": 341312,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_diff_2k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_512_diffuse.webp",
+      "bytes": 14126,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_tiles/red_sandstone_tiles_diff_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_tile_1k_diffuse.jpg",
+      "bytes": 562635,
+      "md5": "ef7c353fc97ceb0999bb93c985c2136e",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_tiles/red_sandstone_tiles_diff_1k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_1k_diffuse.webp",
+      "bytes": 73268,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_tile_2k_normal.jpg",
+      "bytes": 3157901,
+      "md5": "92d98681141d3a502196455d3d31e667",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_2k_normal.webp",
+      "bytes": 1024044,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_512_normal.webp",
+      "bytes": 65960,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_tiles/red_sandstone_tiles_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_tile_1k_normal.jpg",
+      "bytes": 821699,
+      "md5": "9f496baf5520305ee95ea1039eb6daba",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_tiles/red_sandstone_tiles_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_1k_normal.webp",
+      "bytes": 281602,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_rough_2k.jpg",
+      "destination": ".asset-source/textures/sandstone_tile_2k_rough.jpg",
+      "bytes": 979648,
+      "md5": "ad786cd8ee32aacae0bcd5c0155612cd",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_2k_rough.webp",
+      "bytes": 29304,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/red_sandstone_tiles/red_sandstone_tiles_rough_2k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_512_rough.webp",
+      "bytes": 1702,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_tiles/red_sandstone_tiles_rough_1k.jpg",
+      "destination": ".asset-source/textures/sandstone_tile_1k_rough.jpg",
+      "bytes": 226849,
+      "md5": "d722a4bb62563f8628fc762ab2b810af",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_sandstone_tiles/red_sandstone_tiles_rough_1k.jpg",
+      "destination": "public/assets/textures/sandstone_tile_1k_rough.webp",
+      "bytes": 6936,
+      "derivedFrom": ".asset-source/textures/sandstone_tile_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_diff_2k.jpg",
+      "destination": ".asset-source/textures/wood_2k_diffuse.jpg",
+      "bytes": 3116403,
+      "md5": "b26ae70ec77367f421a5e0b3388b3e05",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_diff_2k.jpg",
+      "destination": "public/assets/textures/wood_2k_diffuse.webp",
+      "bytes": 829966,
+      "derivedFrom": ".asset-source/textures/wood_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_diff_2k.jpg",
+      "destination": "public/assets/textures/wood_512_diffuse.webp",
+      "bytes": 39874,
+      "derivedFrom": ".asset-source/textures/wood_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_diff_1k.jpg",
+      "destination": ".asset-source/textures/wood_1k_diffuse.jpg",
+      "bytes": 755937,
+      "md5": "ffaa68add0544811b30459e58cc9b4fd",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_diff_1k.jpg",
+      "destination": "public/assets/textures/wood_1k_diffuse.webp",
+      "bytes": 178150,
+      "derivedFrom": ".asset-source/textures/wood_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/wood_2k_normal.jpg",
+      "bytes": 2927156,
+      "md5": "9e055d8c7b568269d18ab9433b0d25d7",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/wood_2k_normal.webp",
+      "bytes": 850236,
+      "derivedFrom": ".asset-source/textures/wood_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/wood_512_normal.webp",
+      "bytes": 47382,
+      "derivedFrom": ".asset-source/textures/wood_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/wood_1k_normal.jpg",
+      "bytes": 714487,
+      "md5": "2ec0f5e82232d1e9348fc48923f427a4",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/wood_1k_normal.webp",
+      "bytes": 198012,
+      "derivedFrom": ".asset-source/textures/wood_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_rough_2k.jpg",
+      "destination": ".asset-source/textures/wood_2k_rough.jpg",
+      "bytes": 2370202,
+      "md5": "afd7ec48a5bb248d87f39b2993d88cac",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_rough_2k.jpg",
+      "destination": "public/assets/textures/wood_2k_rough.webp",
+      "bytes": 709792,
+      "derivedFrom": ".asset-source/textures/wood_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/old_wood_floor/old_wood_floor_rough_2k.jpg",
+      "destination": "public/assets/textures/wood_512_rough.webp",
+      "bytes": 19008,
+      "derivedFrom": ".asset-source/textures/wood_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_rough_1k.jpg",
+      "destination": ".asset-source/textures/wood_1k_rough.jpg",
+      "bytes": 519577,
+      "md5": "e52625ea19fa46a31747abbef00d1627",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/old_wood_floor/old_wood_floor_rough_1k.jpg",
+      "destination": "public/assets/textures/wood_1k_rough.webp",
+      "bytes": 113734,
+      "derivedFrom": ".asset-source/textures/wood_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_diff_2k.jpg",
+      "destination": ".asset-source/textures/linen_2k_diffuse.jpg",
+      "bytes": 3607181,
+      "md5": "1287d4d1183c511e4adc55b8d006d763",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_diff_2k.jpg",
+      "destination": "public/assets/textures/linen_2k_diffuse.webp",
+      "bytes": 1114420,
+      "derivedFrom": ".asset-source/textures/linen_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_diff_2k.jpg",
+      "destination": "public/assets/textures/linen_512_diffuse.webp",
+      "bytes": 34280,
+      "derivedFrom": ".asset-source/textures/linen_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_diff_1k.jpg",
+      "destination": ".asset-source/textures/linen_1k_diffuse.jpg",
+      "bytes": 835801,
+      "md5": "663db789fb075462b685c1f740e58930",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_diff_1k.jpg",
+      "destination": "public/assets/textures/linen_1k_diffuse.webp",
+      "bytes": 280574,
+      "derivedFrom": ".asset-source/textures/linen_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/linen_2k_normal.jpg",
+      "bytes": 3849356,
+      "md5": "facad45539d3011e197bd87562ba1679",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/linen_2k_normal.webp",
+      "bytes": 1664664,
+      "derivedFrom": ".asset-source/textures/linen_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/linen_512_normal.webp",
+      "bytes": 69652,
+      "derivedFrom": ".asset-source/textures/linen_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/linen_1k_normal.jpg",
+      "bytes": 916843,
+      "md5": "3350269a2e9c472aa406bd3cc1eaf2c8",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/linen_1k_normal.webp",
+      "bytes": 408676,
+      "derivedFrom": ".asset-source/textures/linen_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_rough_2k.jpg",
+      "destination": ".asset-source/textures/linen_2k_rough.jpg",
+      "bytes": 4655974,
+      "md5": "fb70674c782d6bead54c8baaae2b77db",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_rough_2k.jpg",
+      "destination": "public/assets/textures/linen_2k_rough.webp",
+      "bytes": 2111882,
+      "derivedFrom": ".asset-source/textures/linen_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_rough_2k.jpg",
+      "destination": "public/assets/textures/linen_512_rough.webp",
+      "bytes": 101292,
+      "derivedFrom": ".asset-source/textures/linen_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_rough_1k.jpg",
+      "destination": ".asset-source/textures/linen_1k_rough.jpg",
+      "bytes": 1083725,
+      "md5": "a380b24cc43cff88c39510305ebf0020",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_rough_1k.jpg",
+      "destination": "public/assets/textures/linen_1k_rough.webp",
+      "bytes": 493346,
+      "derivedFrom": ".asset-source/textures/linen_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_diff_2k.jpg",
+      "destination": ".asset-source/textures/velvet_2k_diffuse.jpg",
+      "bytes": 3195339,
+      "md5": "8a177e9b50140fda3a46e1349b65473a",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_diff_2k.jpg",
+      "destination": "public/assets/textures/velvet_2k_diffuse.webp",
+      "bytes": 876260,
+      "derivedFrom": ".asset-source/textures/velvet_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_diff_2k.jpg",
+      "destination": "public/assets/textures/velvet_512_diffuse.webp",
+      "bytes": 24070,
+      "derivedFrom": ".asset-source/textures/velvet_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/velour_velvet/velour_velvet_diff_1k.jpg",
+      "destination": ".asset-source/textures/velvet_1k_diffuse.jpg",
+      "bytes": 735556,
+      "md5": "fa3a7ef3606bf7591b8f8577992e7228",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/velour_velvet/velour_velvet_diff_1k.jpg",
+      "destination": "public/assets/textures/velvet_1k_diffuse.webp",
+      "bytes": 188004,
+      "derivedFrom": ".asset-source/textures/velvet_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/velvet_2k_normal.jpg",
+      "bytes": 2656496,
+      "md5": "9118512b61c6f1b074c747d7201fabee",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/velvet_2k_normal.webp",
+      "bytes": 742400,
+      "derivedFrom": ".asset-source/textures/velvet_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/velvet_512_normal.webp",
+      "bytes": 51066,
+      "derivedFrom": ".asset-source/textures/velvet_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/velour_velvet/velour_velvet_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/velvet_1k_normal.jpg",
+      "bytes": 695985,
+      "md5": "41009a399cb4d45e44636a515cd4c8c8",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/velour_velvet/velour_velvet_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/velvet_1k_normal.webp",
+      "bytes": 204074,
+      "derivedFrom": ".asset-source/textures/velvet_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_rough_2k.jpg",
+      "destination": ".asset-source/textures/velvet_2k_rough.jpg",
+      "bytes": 3891940,
+      "md5": "4553577d1d92669fd46534ee2ab55719",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_rough_2k.jpg",
+      "destination": "public/assets/textures/velvet_2k_rough.webp",
+      "bytes": 1731816,
+      "derivedFrom": ".asset-source/textures/velvet_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/velour_velvet/velour_velvet_rough_2k.jpg",
+      "destination": "public/assets/textures/velvet_512_rough.webp",
+      "bytes": 94740,
+      "derivedFrom": ".asset-source/textures/velvet_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/velour_velvet/velour_velvet_rough_1k.jpg",
+      "destination": ".asset-source/textures/velvet_1k_rough.jpg",
+      "bytes": 943960,
+      "md5": "fac679bf7a69501a7402d832667fbc06",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/velour_velvet/velour_velvet_rough_1k.jpg",
+      "destination": "public/assets/textures/velvet_1k_rough.webp",
+      "bytes": 421110,
+      "derivedFrom": ".asset-source/textures/velvet_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_diff_2k.jpg",
+      "destination": ".asset-source/textures/marble_2k_diffuse.jpg",
+      "bytes": 3246069,
+      "md5": "0407b80b586989cd552ff718186fd3d1",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_diff_2k.jpg",
+      "destination": "public/assets/textures/marble_2k_diffuse.webp",
+      "bytes": 847464,
+      "derivedFrom": ".asset-source/textures/marble_2k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_diff_2k.jpg",
+      "destination": "public/assets/textures/marble_512_diffuse.webp",
+      "bytes": 95924,
+      "derivedFrom": ".asset-source/textures/marble_2k_diffuse.jpg",
+      "transform": "cwebp -q 86 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/marble_tiles/marble_tiles_diff_1k.jpg",
+      "destination": ".asset-source/textures/marble_1k_diffuse.jpg",
+      "bytes": 957660,
+      "md5": "8a023d7399c685ab7b539b05a433bc89",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/marble_tiles/marble_tiles_diff_1k.jpg",
+      "destination": "public/assets/textures/marble_1k_diffuse.webp",
+      "bytes": 287722,
+      "derivedFrom": ".asset-source/textures/marble_1k_diffuse.jpg",
+      "transform": "cwebp -q 86"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_nor_gl_2k.jpg",
+      "destination": ".asset-source/textures/marble_2k_normal.jpg",
+      "bytes": 2439351,
+      "md5": "0afeb5b39140661f90cc85daa44e5fdc",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/marble_2k_normal.webp",
+      "bytes": 558862,
+      "derivedFrom": ".asset-source/textures/marble_2k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_nor_gl_2k.jpg",
+      "destination": "public/assets/textures/marble_512_normal.webp",
+      "bytes": 27728,
+      "derivedFrom": ".asset-source/textures/marble_2k_normal.jpg",
+      "transform": "cwebp -q 92 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/marble_tiles/marble_tiles_nor_gl_1k.jpg",
+      "destination": ".asset-source/textures/marble_1k_normal.jpg",
+      "bytes": 601407,
+      "md5": "2514f9c3427e22a702338cdddff62349",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/marble_tiles/marble_tiles_nor_gl_1k.jpg",
+      "destination": "public/assets/textures/marble_1k_normal.webp",
+      "bytes": 121380,
+      "derivedFrom": ".asset-source/textures/marble_1k_normal.jpg",
+      "transform": "cwebp -q 92"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_rough_2k.jpg",
+      "destination": ".asset-source/textures/marble_2k_rough.jpg",
+      "bytes": 2664466,
+      "md5": "cdcabe4ae6f5bd15d13ce880e6059e4b",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_rough_2k.jpg",
+      "destination": "public/assets/textures/marble_2k_rough.webp",
+      "bytes": 787306,
+      "derivedFrom": ".asset-source/textures/marble_2k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_tiles/marble_tiles_rough_2k.jpg",
+      "destination": "public/assets/textures/marble_512_rough.webp",
+      "bytes": 83536,
+      "derivedFrom": ".asset-source/textures/marble_2k_rough.jpg",
+      "transform": "cwebp -q 88 -resize 512 0"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/marble_tiles/marble_tiles_rough_1k.jpg",
+      "destination": ".asset-source/textures/marble_1k_rough.jpg",
+      "bytes": 759292,
+      "md5": "43b46a37ebac482492e633bf81842af4",
+      "cached": false
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/marble_tiles/marble_tiles_rough_1k.jpg",
+      "destination": "public/assets/textures/marble_1k_rough.webp",
+      "bytes": 258264,
+      "derivedFrom": ".asset-source/textures/marble_1k_rough.jpg",
+      "transform": "cwebp -q 88"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/qwantani_sunset_puresky_2k.hdr",
+      "destination": "public/assets/hdr/day_2k.hdr",
+      "bytes": 4171959,
+      "md5": "b918af5fefb341535961ffdad5fab7bc",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/qwantani_sunset_puresky_1k.hdr",
+      "destination": "public/assets/hdr/day_1k.hdr",
+      "bytes": 1061624,
+      "md5": "fe79b1b213166a70871eaddf7fce8c4e",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/qwantani_night_puresky_2k.hdr",
+      "destination": "public/assets/hdr/night_2k.hdr",
+      "bytes": 5461210,
+      "md5": "a2ef5b92f49f77b5bad15add5dad4feb",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/qwantani_night_puresky_1k.hdr",
+      "destination": "public/assets/hdr/night_1k.hdr",
+      "bytes": 1389258,
+      "md5": "e8691211295e505f77c8c3bdcf3055d9",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/brass_diya_lantern/brass_diya_lantern_2k.gltf",
+      "destination": ".asset-source/models/lantern_diya/brass_diya_lantern_2k.gltf",
+      "bytes": 10202,
+      "md5": "2a288769636bc0833516381e44e1629a",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_diya_lantern/brass_diya_lantern_arm_2k.jpg",
+      "destination": ".asset-source/models/lantern_diya/textures/brass_diya_lantern_arm_2k.jpg",
+      "bytes": 2472763,
+      "md5": "3b45cce96958da5eae83d010877075af",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_diya_lantern/brass_diya_lantern_diff_2k.jpg",
+      "destination": ".asset-source/models/lantern_diya/textures/brass_diya_lantern_diff_2k.jpg",
+      "bytes": 1699090,
+      "md5": "fdacb3d6b4f88b4ee684e2a73c20cfdc",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/brass_diya_lantern/brass_diya_lantern.bin",
+      "destination": ".asset-source/models/lantern_diya/brass_diya_lantern.bin",
+      "bytes": 455708,
+      "md5": "1e09f3575cab311415e85fd76256a067",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_diya_lantern/brass_diya_lantern_nor_gl_2k.jpg",
+      "destination": ".asset-source/models/lantern_diya/textures/brass_diya_lantern_nor_gl_2k.jpg",
+      "bytes": 837724,
+      "md5": "1f64c4a1fd5b9e763c28ff3a4cb44ab9",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/brass_diya_lantern/brass_diya_lantern_2k.gltf",
+      "destination": "public/models/props/lantern_diya.glb",
+      "bytes": 291916,
+      "derivedFrom": ".asset-source/models/lantern_diya/brass_diya_lantern_2k.gltf",
+      "transform": "gltf-transform optimize: meshopt, webp <=1024, simplify 0.0005"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/brass_pot_01/brass_pot_01_1k.gltf",
+      "destination": ".asset-source/models/vessel_brass/brass_pot_01_1k.gltf",
+      "bytes": 2681,
+      "md5": "f7494994ac15f801c5a9e4d2d4bb22dc",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_nor_gl_1k.jpg",
+      "destination": ".asset-source/models/vessel_brass/textures/brass_pot_01_nor_gl_1k.jpg",
+      "bytes": 313819,
+      "md5": "77c56abc2eec2e40aa45eaad12ff76c5",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/brass_pot_01/brass_pot_01.bin",
+      "destination": ".asset-source/models/vessel_brass/brass_pot_01.bin",
+      "bytes": 94560,
+      "md5": "3b3a13f078933ec94b4cbf55c95f12a0",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_diff_1k.jpg",
+      "destination": ".asset-source/models/vessel_brass/textures/brass_pot_01_diff_1k.jpg",
+      "bytes": 648842,
+      "md5": "dd37598e39de2c9415329868e6d5c8dd",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_pot_01/brass_pot_01_arm_1k.jpg",
+      "destination": ".asset-source/models/vessel_brass/textures/brass_pot_01_arm_1k.jpg",
+      "bytes": 463572,
+      "md5": "6416768f2c7012fb1ad15513d6f345c3",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/brass_pot_01/brass_pot_01_1k.gltf",
+      "destination": "public/models/props/vessel_brass.glb",
+      "bytes": 167872,
+      "derivedFrom": ".asset-source/models/vessel_brass/brass_pot_01_1k.gltf",
+      "transform": "gltf-transform optimize: meshopt, webp <=1024, simplify 0.0005"
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/brass_candleholders/brass_candleholders_2k.gltf",
+      "destination": ".asset-source/models/candlesticks/brass_candleholders_2k.gltf",
+      "bytes": 14865,
+      "md5": "92e52c0f9375bb1ecc0f3a6a581f8e9e",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_02_nor_gl_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_02_nor_gl_2k.jpg",
+      "bytes": 2439207,
+      "md5": "d132f1aae14759a0a9510ccd12c0194b",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_02_diff_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_02_diff_2k.jpg",
+      "bytes": 3479550,
+      "md5": "b5dfe81094d1fec56b74a6e471591367",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_03_nor_gl_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_03_nor_gl_2k.jpg",
+      "bytes": 2912192,
+      "md5": "78fd75415610553e45a2d5bb3449337e",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_02_arm_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_02_arm_2k.jpg",
+      "bytes": 2817435,
+      "md5": "0846ce6718bf48a7c115708939c3d212",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_candles_nor_gl_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_candles_nor_gl_2k.jpg",
+      "bytes": 478106,
+      "md5": "b83cc65526c68372e30b51229c756025",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_01_diff_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_01_diff_2k.jpg",
+      "bytes": 3507869,
+      "md5": "f0123cfae1ccd34305d367e00e8f01fe",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_01_nor_gl_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_01_nor_gl_2k.jpg",
+      "bytes": 2380892,
+      "md5": "23c865455ad736f436e8ceb0c15c6235",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_03_diff_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_03_diff_2k.jpg",
+      "bytes": 3459883,
+      "md5": "ae2650e939ffd6a70291e0cfdd520ecb",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_01_arm_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_01_arm_2k.jpg",
+      "bytes": 3441450,
+      "md5": "d6142ef1ee7f7576bd92dffaf717d5b5",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_candles_diff_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_candles_diff_2k.jpg",
+      "bytes": 952690,
+      "md5": "edf5ccde0a5362c0193f11931eb99b34",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_03_arm_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_03_arm_2k.jpg",
+      "bytes": 3302021,
+      "md5": "b2eee715710d63b242100d67b8b8c9c0",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_candles_arm_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_candles_arm_2k.jpg",
+      "bytes": 1040675,
+      "md5": "9317fc5c54609fdc2f77ddca276a7aaa",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/brass_candleholders/brass_candleholders_flame_diff_2k.jpg",
+      "destination": ".asset-source/models/candlesticks/textures/brass_candleholders_flame_diff_2k.jpg",
+      "bytes": 330500,
+      "md5": "0948f2bc8a0470fec0153845d2a01f0d",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/brass_candleholders/brass_candleholders.bin",
+      "destination": ".asset-source/models/candlesticks/brass_candleholders.bin",
+      "bytes": 1189088,
+      "md5": "ea4f625bd0ef542c0026bbcf61370b71",
+      "cached": true
+    },
+    {
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/brass_candleholders/brass_candleholders_2k.gltf",
+      "destination": "public/models/props/candlesticks.glb",
+      "bytes": 1921304,
+      "derivedFrom": ".asset-source/models/candlesticks/brass_candleholders_2k.gltf",
+      "transform": "gltf-transform optimize: meshopt, webp <=1024, simplify 0.0005"
+    },
+    {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Carved_sandstone_courtyard_interior%2C_Jaisalmer.jpg/1920px-Carved_sandstone_courtyard_interior%2C_Jaisalmer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "destination": "refs/courtyard_carved_sandstone.jpg",
+      "bytes": 1399312,
+      "md5": "52c2eccce5bec12818832d58a007b86d",
+      "cached": true
+    },
+    {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Patwa_Haveli%2C_Jaisalmer_-_front_facade.jpg/1920px-Patwa_Haveli%2C_Jaisalmer_-_front_facade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "destination": "refs/patwon_facade.jpg",
+      "bytes": 633891,
+      "md5": "a102e950b649c80f7ed369d39745807c",
+      "cached": true
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Patwa_Haveli%2C_Jaisalmer_-_intricate_windows.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "destination": "refs/patwon_windows.jpg",
+      "bytes": 294928,
+      "md5": "15b5d2cb87feabf543332d7dab4c4651",
+      "cached": true
+    },
+    {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Haveli_art.jpg/1920px-Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Haveli_art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "destination": "refs/fort_haveli_art.jpg",
+      "bytes": 899841,
+      "md5": "136c0d9fbbdac7af2ac7e50c97dc5f85",
+      "cached": true
+    },
+    {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Columns.jpg/1920px-Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Columns.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "destination": "refs/jain_columns.jpg",
+      "bytes": 607248,
+      "md5": "265438e8cf6f907a1130b719299620fe",
+      "cached": true
+    },
+    {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Carvings_2.jpg/1920px-Jaisalmer%2C_India%2C_Jaisalmer_Fort%2C_Jain_Temple%2C_Carvings_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "destination": "refs/jain_carvings.jpg",
+      "bytes": 685234,
+      "md5": "6f37e28e7a4677495246352f14746d03",
+      "cached": true
+    }
+  ]
+}
