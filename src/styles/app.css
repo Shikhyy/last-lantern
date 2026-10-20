@@ -1,0 +1,550 @@
+.app {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.palace-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  padding: clamp(1rem, 2.4vw, 2.25rem);
+  gap: 1rem;
+}
+
+.overlay > * {
+  pointer-events: none;
+}
+
+.overlay button,
+.overlay a,
+.overlay select,
+.overlay summary,
+.overlay details {
+  pointer-events: auto;
+}
+
+/* ---------------------------------------------------------------- Top bar */
+
+.topbar {
+  grid-row: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.25rem 0.25rem 0;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.wordmark__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  letter-spacing: 0.005em;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0, 'opsz' 40;
+}
+
+.wordmark__place {
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.segmented {
+  display: inline-flex;
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--basalt-950) 55%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.segmented__item {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink-muted);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-fast), background var(--dur-fast) var(--ease-fast);
+}
+
+.segmented__item + .segmented__item {
+  border-left: 1px solid var(--color-hairline);
+}
+
+.segmented__item:hover {
+  color: var(--color-ink);
+}
+
+.segmented__item.is-active {
+  color: var(--sand-50);
+  background: color-mix(in oklab, var(--sand-400) 26%, transparent);
+}
+
+.ghost-button {
+  appearance: none;
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--basalt-950) 55%, transparent);
+  backdrop-filter: blur(10px);
+  color: var(--color-ink-secondary);
+  padding: 0.5rem 0.8rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-fast), border-color var(--dur-fast) var(--ease-fast);
+}
+
+.ghost-button:hover,
+.ghost-button.is-active {
+  color: var(--sand-50);
+  border-color: color-mix(in oklab, var(--sand-400) 55%, transparent);
+}
+
+/* ------------------------------------------------------------ Room caption */
+
+.room-caption {
+  grid-row: 3;
+  grid-column: 1;
+  align-self: end;
+  max-width: min(34ch, 42vw);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  animation: reveal var(--dur-slow) var(--ease-slow) both;
+}
+
+.room-caption__kicker {
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent-hot);
+}
+
+.room-caption__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  font-variation-settings: 'SOFT' 0, 'WONK' 1, 'opsz' 96;
+}
+
+.room-caption__body {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-ink-secondary);
+  max-width: 40ch;
+}
+
+/* -------------------------------------------------------------- Room nav */
+
+.room-nav {
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: end;
+  align-self: end;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.room-nav__item {
+  appearance: none;
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--basalt-950) 52%, transparent);
+  backdrop-filter: blur(10px);
+  color: var(--color-ink-muted);
+  padding: 0.55rem 0.7rem 0.55rem 0.85rem;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: color var(--dur-base) var(--ease-base), border-color var(--dur-base) var(--ease-base);
+}
+
+.room-nav__item:hover {
+  color: var(--color-ink);
+}
+
+.room-nav__item.is-active {
+  color: var(--sand-50);
+  border-color: color-mix(in oklab, var(--gold-600) 70%, transparent);
+}
+
+.room-nav__label {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+}
+
+.room-nav__key {
+  font-family: var(--font-ui);
+  font-size: 0.62rem;
+  color: var(--color-ink-muted);
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  padding: 0.1rem 0.32rem;
+}
+
+.room-nav__item.is-active .room-nav__key {
+  color: var(--gold-300);
+  border-color: color-mix(in oklab, var(--gold-600) 60%, transparent);
+}
+
+/* --------------------------------------------------------------- Utility */
+
+.credit-line,
+.hint-line {
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: center;
+  align-self: end;
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-muted);
+  max-width: 46ch;
+}
+
+.hint-line {
+  margin-bottom: 2.6rem;
+}
+
+.hint-line kbd {
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  padding: 0.05rem 0.3rem;
+}
+
+@media (max-width: 1080px) {
+  .credit-line {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------- Diagnostics */
+
+.diagnostics {
+  position: absolute;
+  top: 5.5rem;
+  right: clamp(1rem, 2.4vw, 2.25rem);
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.28rem 1.1rem;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--basalt-950) 78%, transparent);
+  backdrop-filter: blur(12px);
+  font-size: 0.72rem;
+}
+
+.diagnostics > div {
+  display: contents;
+}
+
+.diagnostics dt {
+  color: var(--color-ink-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.62rem;
+}
+
+.diagnostics dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  color: var(--sand-100);
+}
+
+/* ----------------------------------------------------------------- Sheet */
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklab, var(--basalt-950) 72%, transparent);
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  pointer-events: auto;
+}
+
+.sheet__inner {
+  width: min(58rem, 92vw);
+  max-height: 82svh;
+  overflow: auto;
+  background: var(--elev-1);
+  border: 1px solid var(--color-hairline);
+  border-radius: 3px;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sheet__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.sheet__header h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.05;
+}
+
+.sheet h3 {
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent-hot);
+  margin-bottom: 0.5rem;
+}
+
+.sheet p,
+.sheet li {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--color-ink-secondary);
+}
+
+.sheet ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sheet section + section {
+  border-top: 1px solid var(--color-hairline);
+  padding-top: 1.25rem;
+}
+
+/* -------------------------------------------------------- Asset warning */
+
+.asset-warning {
+  position: absolute;
+  left: clamp(1rem, 2.4vw, 2.25rem);
+  bottom: 11rem;
+  max-width: 34ch;
+  padding: 0.9rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--flame-500) 45%, transparent);
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--basalt-950) 82%, transparent);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+}
+
+.asset-warning ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.asset-warning code {
+  font-size: 0.72rem;
+}
+
+/* ---------------------------------------------------------- Loading veil */
+
+.loading-veil {
+  position: absolute;
+  inset: 0;
+  background: var(--basalt-950);
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.9rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-slow) var(--ease-slow), visibility 0s linear var(--dur-slow);
+  pointer-events: none;
+}
+
+.loading-veil.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--dur-slow) var(--ease-slow);
+  pointer-events: auto;
+}
+
+.loading-veil__eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--color-accent-hot);
+}
+
+.loading-veil__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 400;
+}
+
+.loading-veil__track {
+  width: min(20rem, 60vw);
+  height: 1px;
+  background: var(--color-hairline);
+  overflow: hidden;
+  margin-top: 0.6rem;
+}
+
+.loading-veil__fill {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+  transform-origin: left center;
+  transition: transform var(--dur-base) var(--ease-base);
+}
+
+.loading-veil__count {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--color-ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------- Fallbacks */
+
+.fallback-page {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: var(--basalt-950);
+}
+
+.fallback-page__inner {
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.fallback-page h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.6vw, 3rem);
+}
+
+.fallback-page p {
+  color: var(--color-ink-secondary);
+  line-height: 1.6;
+}
+
+.notice {
+  position: absolute;
+  top: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-hairline);
+  border-radius: 2px;
+  background: color-mix(in oklab, var(--basalt-950) 86%, transparent);
+  backdrop-filter: blur(12px);
+  font-size: 0.78rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  pointer-events: auto;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .overlay {
+    padding: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .topbar__actions {
+    justify-content: flex-start;
+  }
+
+  .room-caption {
+    max-width: 100%;
+  }
+
+  .room-caption__body {
+    display: none;
+  }
+
+  .hint-line {
+    display: none;
+  }
+
+  .room-nav {
+    justify-self: stretch;
+    justify-content: flex-start;
+  }
+
+  .room-nav__item {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}

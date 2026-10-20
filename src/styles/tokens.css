@@ -1,0 +1,60 @@
+:root {
+  /* Primitive — sandstone, basalt, flame. See docs/ART_DIRECTION.md §4. */
+  --sand-50: #f4efe6;
+  --sand-100: #e9dfcc;
+  --sand-200: #d9c4a0;
+  --sand-300: #b9ae9c;
+  --sand-400: #c79a5b;
+  --sand-600: #a9743b;
+  --sand-800: #6b4423;
+  --sand-950: #2a1c12;
+  --basalt-950: #0e0b09;
+  --basalt-900: #1a1512;
+  --basalt-800: #241b14;
+  --basalt-700: #2e2117;
+  --gold-600: #b8892b;
+  --gold-300: #e8c96a;
+  --flame-500: #e8892b;
+  --flame-300: #f2b25c;
+  --burgundy-800: #3a1219;
+  --burgundy-600: #5c1f2b;
+  --indigo-950: #101726;
+  --indigo-800: #1c2740;
+  --emerald-700: #1f6f5c;
+
+  /* Semantic */
+  --color-bg: var(--basalt-950);
+  --color-surface: color-mix(in oklab, var(--basalt-900) 88%, transparent);
+  --color-surface-raised: var(--basalt-800);
+  --color-surface-hover: var(--basalt-700);
+  --color-ink: var(--sand-50);
+  --color-ink-secondary: var(--sand-100);
+  --color-ink-muted: var(--sand-300);
+  --color-accent: var(--flame-500);
+  --color-accent-hot: var(--flame-300);
+  --color-focus: var(--gold-300);
+  --color-danger: var(--burgundy-600);
+  --color-success: var(--emerald-700);
+  --color-night: var(--indigo-950);
+  --color-shadow-field: var(--burgundy-800);
+  --color-hairline: color-mix(in oklab, var(--sand-400) 18%, transparent);
+  --color-carved: color-mix(in oklab, var(--sand-950) 70%, transparent);
+  --elev-0: var(--basalt-950);
+  --elev-1: var(--basalt-900);
+  --elev-2: var(--basalt-800);
+  --elev-3: var(--basalt-700);
+
+  /* Type */
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-ui: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Motion */
+  --dur-fast: 150ms;
+  --ease-fast: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-base: 240ms;
+  --ease-base: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-slow: 700ms;
+  --ease-slow: cubic-bezier(0.65, 0, 0.35, 1);
+  --reveal-distance: 24px;
+  --stagger: 70ms;
+}

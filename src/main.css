@@ -1,0 +1,8 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource/public-sans/400.css';
+@import '@fontsource/public-sans/500.css';
+@import '@fontsource/public-sans/600.css';
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/app.css';
+@import './styles/game.css';
